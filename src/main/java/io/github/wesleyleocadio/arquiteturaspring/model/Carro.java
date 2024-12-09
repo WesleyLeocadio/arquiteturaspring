@@ -3,6 +3,7 @@ package io.github.wesleyleocadio.arquiteturaspring.model;
 import java.awt.Color;
 
 import io.github.wesleyleocadio.arquiteturaspring.model.enums.Montadora;
+import io.github.wesleyleocadio.arquiteturaspring.model.records.CarroStatusRecord;
 
 public class Carro {
 	private String modelo;
@@ -12,6 +13,14 @@ public class Carro {
 	
 	public Carro(Motor motor) {
 		this.motor = motor;
+	}
+	
+	
+	public CarroStatusRecord darIngnicao(Chave chave) {
+		if (chave.getMontadora() != this.montadora) {
+			return new CarroStatusRecord("Nao é possivel ligar o carro com esta chave");
+		}
+		return new CarroStatusRecord("Carro ligado! Rodando com o motor: "+ this.motor);
 	}
 	
 	public String getModelo() {
