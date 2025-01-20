@@ -1,4 +1,4 @@
-package io.github.wesleyleocadio.arquiteturaspring.repositories;
+package io.github.wesleyleocadio.arquiteturaspring.montadora.repositories;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

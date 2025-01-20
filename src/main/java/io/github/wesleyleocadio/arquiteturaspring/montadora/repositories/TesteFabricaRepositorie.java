@@ -1,4 +1,4 @@
-package io.github.wesleyleocadio.arquiteturaspring.repositories;
+package io.github.wesleyleocadio.arquiteturaspring.montadora.repositories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
