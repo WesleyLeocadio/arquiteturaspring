@@ -2,6 +2,7 @@ package io.github.wesleyleocadio.arquiteturaspring.montadora.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import io.github.wesleyleocadio.arquiteturaspring.montadora.model.Motor;
 import io.github.wesleyleocadio.arquiteturaspring.montadora.model.enums.TipoMotor;
@@ -10,6 +11,7 @@ import io.github.wesleyleocadio.arquiteturaspring.montadora.model.enums.TipoMoto
 public class MontadoraConfiguration {
 	
 	@Bean
+	@Primary
 	public Motor motorAspirado() {
 		var motor = new Motor();
 		motor.setCavalos(120);
