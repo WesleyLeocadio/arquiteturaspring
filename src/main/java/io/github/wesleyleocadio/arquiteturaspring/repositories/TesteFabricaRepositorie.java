@@ -17,7 +17,7 @@ import io.github.wesleyleocadio.arquiteturaspring.montadora.model.records.CarroS
 public class TesteFabricaRepositorie {
 	
 	@Autowired
-	//@Qualifier("motorEletrico")
+	@Eletrico
 	private Motor motor;
 	
 	@PostMapping
