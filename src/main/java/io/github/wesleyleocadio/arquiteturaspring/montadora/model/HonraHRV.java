@@ -1,8 +1,8 @@
-package io.github.wesleyleocadio.arquiteturaspring.model;
+package io.github.wesleyleocadio.arquiteturaspring.montadora.model;
 
 import java.awt.Color;
 
-import io.github.wesleyleocadio.arquiteturaspring.model.enums.Montadora;
+import io.github.wesleyleocadio.arquiteturaspring.montadora.model.enums.Montadora;
 
 public class HonraHRV extends Carro {
 	public HonraHRV(Motor motor) {

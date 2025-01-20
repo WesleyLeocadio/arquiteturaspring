@@ -1,6 +1,6 @@
-package io.github.wesleyleocadio.arquiteturaspring.model;
+package io.github.wesleyleocadio.arquiteturaspring.montadora.model;
 
-import io.github.wesleyleocadio.arquiteturaspring.model.enums.TipoMotor;
+import io.github.wesleyleocadio.arquiteturaspring.montadora.model.enums.TipoMotor;
 
 public class Motor {
 	private String modelo;

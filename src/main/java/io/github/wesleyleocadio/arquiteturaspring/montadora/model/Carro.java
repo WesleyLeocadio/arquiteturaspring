@@ -1,9 +1,9 @@
-package io.github.wesleyleocadio.arquiteturaspring.model;
+package io.github.wesleyleocadio.arquiteturaspring.montadora.model;
 
 import java.awt.Color;
 
-import io.github.wesleyleocadio.arquiteturaspring.model.enums.Montadora;
-import io.github.wesleyleocadio.arquiteturaspring.model.records.CarroStatusRecord;
+import io.github.wesleyleocadio.arquiteturaspring.montadora.model.enums.Montadora;
+import io.github.wesleyleocadio.arquiteturaspring.montadora.model.records.CarroStatusRecord;
 
 public class Carro {
 	private String modelo;

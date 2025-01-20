@@ -1,6 +1,6 @@
-package io.github.wesleyleocadio.arquiteturaspring.model;
+package io.github.wesleyleocadio.arquiteturaspring.montadora.model;
 
-import io.github.wesleyleocadio.arquiteturaspring.model.enums.Montadora;
+import io.github.wesleyleocadio.arquiteturaspring.montadora.model.enums.Montadora;
 
 public class Chave {
 	private Montadora montadora;
