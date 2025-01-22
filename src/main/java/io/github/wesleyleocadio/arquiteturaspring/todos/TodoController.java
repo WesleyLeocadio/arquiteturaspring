@@ -28,13 +28,30 @@ public class TodoController {
 	
 	@PostMapping
 	public ResponseEntity<TodoEntity> salvar(@RequestBody TodoEntity todo) {
-	    TodoEntity todoEntity = todoService.salvar(todo);
+	    TodoEntity todoEntity = null;
+	    
+	    try{
+	    	todoEntity = todoService.salvar(todo);
+	    } catch (IllegalArgumentException e) {
+	    	throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+	    }
 	 // Cria a URI do novo recurso, usando o ID do TodoEntity
         UriComponents uriBuilder = UriComponentsBuilder
                 .fromPath("/todos/{id}")
                 .buildAndExpand(todoEntity.getId());
      // Retorna a resposta com status CREATED (201) e a URI do novo recurso
         return ResponseEntity.created(uriBuilder.toUri()).body(todoEntity);
+	}
+	
+	@PutMapping("{id}")
+	public void atualizarStatus(@PathVariable("id") Integer id,
+			@RequestBody TodoEntity todo) {	    
+	    try{
+	    	todo.setId(id);
+	    	todoService.atualizarEEnviarNotificacao(todo);
+	    } catch (IllegalArgumentException e) {
+	    	throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+	    }
 	}
 	
 	@GetMapping("{id}")
